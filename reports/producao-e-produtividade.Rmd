@@ -116,16 +116,17 @@ Normalmente reportaríamos o resultado da seguinte maneira, substituindo VarInde
 
 Produza aqui a sua versão desse texto, portanto:
 
-> VarIndep1: **a quantidade de docentes permanentes num dado programa de pós-graduação**
-> VarDep: **produção do programa** - (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1)
+VarIndep1: **a quantidade de docentes permanentes num dado programa de pós-graduação**
 
-> Regressão múltipla foi utilizada para analisar se **a quantidade de docentes permanentes num dado programa de pós-graduação** tem uma associação significativa  **produção do programa** (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1). Os resultados da regressão indicam que um modelo com os 1 preditor no formato $producao = -41.27 + 4.81 * docentesPermanentes$ explicam 81,46% da variância da variável de resposta (R2 = 0.8146).  A variável $docentesPermanentes$, medida como a quantidade total de docentes permanentes no programa de pós graduação, tem uma relação significativa com o erro (b = [4,27; 5,36], IC com 95%). O aumento de 1 unidade de $docentesPermanentes$ produz uma mudança positiva de 4.81 na produção do programa.
+VarDep: **produção do programa** - (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1)
+
+Regressão múltipla foi utilizada para analisar se **a quantidade de docentes permanentes num dado programa de pós-graduação** tem uma associação significativa  **produção do programa** (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1). Os resultados da regressão indicam que um modelo com os 1 preditor no formato $producao = -41.27 + 4.81 * docentesPermanentes$ explicam 81,46% da variância da variável de resposta (R2 = 0.8146).  A variável $docentesPermanentes$, medida como a quantidade total de docentes permanentes no programa de pós graduação, tem uma relação significativa com o erro (b = [4,27; 5,36], IC com 95%). O aumento de 1 unidade de $docentesPermanentes$ produz uma mudança positiva de 4.81 na produção do programa.
 
 
 Dito isso, o que significa a relação que você encontrou na prática para entendermos os programas de pós graduação no Brasil? E algum palpite de por que a relação que encontramos é forte?
 
 
-> Pode-se observar que a quantidade de docentes permanentes, em programas de pós graduação no Brasil em computação, tem uma forte relação com a produção do programa e que os programas que contém uma maior quantidade de docentes permanentes também apresentam uma maior produção de trabalhos. Portanto, pode-se concluir que os docentes possuem um contribuição muito importante nos resultados de produção científica das universidades, e que consequentemente, quanto maior o número de docentes, também será maior o número de produções científicas.
+Pode-se observar que a quantidade de docentes permanentes, em programas de pós graduação no Brasil em computação, tem uma forte relação com a produção do programa e que os programas que contém uma maior quantidade de docentes permanentes também apresentam uma maior produção de trabalhos. Portanto, pode-se concluir que os docentes possuem um contribuição muito importante nos resultados de produção científica das universidades, e que consequentemente, quanto maior o número de docentes, também será maior o número de produções científicas.
 
 
 ## Mais fatores
@@ -172,8 +173,8 @@ para_plotar_modelo %>%
 Considerando agora esses três fatores, o que podemos dizer sobre como cada um deles se relaciona com a produção de um programa de pós em CC? E sobre o modelo? Ele explica mais que o modelo 1? 
 
 
-> Regressão múltipla foi utilizada para analisar se a **quantidade de docentes permanentes**, a **quantidade de mestrandos** e a **quantidade de doutorandos** tem uma associação significativa com a **produção do programa de pós graduação** (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1). 
- Os resultados da regressão indicam que um modelo com os 3 preditores no formato $producao = -14.37 + 3.50 * docentesPermanentes - 0.19 * mestrandos + 1.0007 * doutorandos$ explicam 87,07% da variância da variável de resposta (R2 = 0.8707). 
+Regressão múltipla foi utilizada para analisar se a **quantidade de docentes permanentes**, a **quantidade de mestrandos** e a **quantidade de doutorandos** tem uma associação significativa com a **produção do programa de pós graduação** (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1). 
+Os resultados da regressão indicam que um modelo com os 3 preditores no formato $producao = -14.37 + 3.50 * docentesPermanentes - 0.19 * mestrandos + 1.0007 * doutorandos$ explicam 87,07% da variância da variável de resposta (R2 = 0.8707). 
 
 * A variável $docentesPermanentes$, medida como a quantidade total de docentes permanentes tem uma relação significativa com o erro b = [2,58; 4,42], IC com 95%
 
@@ -181,13 +182,13 @@ Considerando agora esses três fatores, o que podemos dizer sobre como cada um d
 
 * A variável $doutorandos$, medida como a quantidade total de alunos do doutorado, tem uma relação significativa com o erro b = [0,63; 1,37], IC com 95%. 
 
-> Após análise dos resultados obtidos para os valores das estimativas associadas a cada variável independente, é possível afirmar que o aumento de 1 unidade de $docentesPermanentes$ produz uma mudança de 3,50 na produção do programa, enquanto que o aumento da variável $mestrandos$ diminui em -0,19 na produção do programa e o aumento do número de $doutorandos$ aumenta em 1.0007 nesta.
-    O modelo 1 explica aproximadamente 81% da variância da quantidade de docentes permanentes, enquanto o modelo 2 explica aproximadamente 87% desta variância. Consequentemente, isso pode ser explicado pelo fato de que foram acrescentadas mais 2 variáveis que influenciam na variável dependente do modelo inicialmente proposto e, portanto, a variância pode ser melhor representada pelo modelo 2.
+Após análise dos resultados obtidos para os valores das estimativas associadas a cada variável independente, é possível afirmar que o aumento de 1 unidade de $docentesPermanentes$ produz uma mudança de 3,50 na produção do programa, enquanto que o aumento da variável $mestrandos$ diminui em -0,19 na produção do programa e o aumento do número de $doutorandos$ aumenta em 1.0007 nesta.
+O modelo 1 explica aproximadamente 81% da variância da quantidade de docentes permanentes, enquanto o modelo 2 explica aproximadamente 87% desta variância. Consequentemente, isso pode ser explicado pelo fato de que foram acrescentadas mais 2 variáveis que influenciam na variável dependente do modelo inicialmente proposto e, portanto, a variância pode ser melhor representada pelo modelo 2.
     
 
 ## Agora produtividade 
 
-Diferente de medirmos produção (total produzido), é medirmos produtividade (produzido / utilizado). Abaixo focaremos nessa análise. Para isso crie um modelo que investiga como um conjunto de fatores que você julga que são relevantes se relacionam com a produtividade dos programas. Crie um modelo que avalie como _pelo menos 3 fatores_ se relacionam com a produtividade de um programa. Pode reutilizar fatores que já definimos e analizamos para produção. Mas cuidado para não incluir fatores que sejam função linear de outros já incluídos (ex: incluir A, B e um tercero C=A+B). Produza abaixo o modelo e um texto que comente (i) o modelo, tal como os que fizemos antes, e (ii) as implicações - o que aprendemos sobre como funcionam programas de pós no brasil?
+Diferente de medirmos produção (total produzido), é medirmos **produtividade** (produzido / utilizado). Abaixo focaremos nessa análise. Para isso crie um modelo que investiga como um conjunto de fatores que você julga que são relevantes se relacionam com a produtividade dos programas. Crie um modelo que avalie como _pelo menos 3 fatores_ se relacionam com a produtividade de um programa. Pode reutilizar fatores que já definimos e analizamos para produção. Mas cuidado para não incluir fatores que sejam função linear de outros já incluídos (ex: incluir A, B e um tercero C=A+B). Produza abaixo o modelo e um texto que comente (i) o modelo, tal como os que fizemos antes, e (ii) as implicações - o que aprendemos sobre como funcionam programas de pós no brasil?
     
 
 Dados: 
@@ -200,7 +201,7 @@ cacc_1 = cacc_tudo %>%
     docentes = `Docentes permanentes`,
     producao = (periodicos_A1 + periodicos_A2 + periodicos_B1),
     per_comaluno = (per_comaluno_A1 + per_comaluno_A2 + per_comaluno_B1),
-    produtividade_dos = producao / docentes,
+    produtividade = producao / docentes,
     mestrados = Dissertacoes,
     doutorados = Teses,
     produtividade_mes = producao / mestrados,
@@ -211,7 +212,8 @@ cacc_1 = cacc_tudo %>%
     nivel = Nível,
     per_comaluno_A1 = per_comaluno_A1,
     per_comaluno_A2  = per_comaluno_A2,
-    per_comaluno_B1 = per_comaluno_B1
+    per_comaluno_B1 = per_comaluno_B1,
+    periodicos_A1 = periodicos_A1
   )
 
 glimpse(cacc_1)
@@ -242,23 +244,56 @@ cacc_1 %>%
 
 ```{r}
 #modelo3 = lm(producao ~ docentes + mestrados + doutorados, data = cacc_1)
-modelo3 = lm(producao ~ nivel + per_comaluno_A1 + docentes_colaboradores, data = cacc_1)
+modelo3 = lm(produtividade ~ nivel + per_comaluno_A1 + docentes_colaboradores, data = cacc_1)
 
 tidy(modelo3, conf.int = TRUE, conf.level = 0.95)
 glance(modelo3)
 ```
 
+Visualizar o modelo com muitas variáveis independentes fica mais difícil
+
+
+```{r}
+para_plotar_modelo = cacc_1 %>% 
+  data_grid(produtividade = seq_range(produtividade, 10), # Crie um vetor de 10 valores no range
+            nivel = nivel,  
+            docentes_colaboradores = seq_range(docentes_colaboradores, 0.05),
+            per_comaluno_A1 = seq_range(per_comaluno_A1, 3)) %>% 
+  add_predictions(modelo3)
+
+glimpse(para_plotar_modelo)
+
+```
+Falta esse plot:
+```{r}
+para_plotar_modelo %>% 
+  ggplot(aes(x = nivel, y = pred)) + 
+  geom_line(aes(group = per_comaluno_A1, colour = per_comaluno_A1)) + 
+  geom_point(data = cacc_1, aes(y = produtividade, colour = per_comaluno_A1, size = docentes_colaboradores, alpha = 0.01))
+```
+
+```{r}
+para_plotar_modelo %>% 
+  ggplot(aes(x = per_comaluno_A1, y = produtividade)) + 
+  #geom_line(aes(group = nivel, colour = nivel)) + 
+  geom_point(data = cacc_1, aes(x = per_comaluno_A1, y = produtividade, colour = docentes_colaboradores, size = nivel))
+```
+
+
+
+  
 ### Conclusão
 
-Regressão múltipla foi utilizada para analisar se a relação entre o nível de conceito da instituição, a quantidade de periódicos de qualis A1 com a participação de alunos e a participação de docentes colaboradores tem uma associação com a produtividade do programa. Os resultados da regressão indicam que um modelo com os 2 preditores no formato $producao = -61.95 + 26.27*nivel + 2.06*periodicosComAlunoA1 + 0.73*docentesColaboradores$ explicam 85,99% da variância da variável de resposta (R2 = 0.8599). 
+Regressão múltipla foi utilizada para analisar se a relação entre o nível de conceito da instituição, a quantidade de periódicos de qualis A1 com a participação de alunos e a participação de docentes colaboradores tem uma associação com a produtividade do programa. Os resultados da regressão indicam que um modelo com os 2 preditores no formato $produtividade = -0,66 + 0,78*nivel + 0.006*periodicosComAlunoA1 -0.005*docentesColaboradores$ explicam 51,55% da variância da variável de resposta (R2 = 0.5155). 
 
-* A variável $nivel$, medida como o nível de conceito da instituição tem uma relação significativa com o erro b = [19,11; 33,42], IC com 95%
+* A variável $nivel$, medida como o nível de conceito da instituição tem uma relação significativa com o erro b = [0.50; 1.06], IC com 95%
 
-* A variável $periodicosComAlunoA1$, medida como a quantidade total de publicações em qualis A1 com a participação de alunos, tem uma relação significativa com o erro b = [1,52; 2,59], IC com 95%
+* A variável $periodicosComAlunoA1$, medida como a quantidade total de publicações em qualis A1 com a participação de alunos, tem uma relação significativa (ou talvez nem possuir, pelo fato do intervalo de confiança incluir o 0) com o erro b = [-0.01; 0.02], IC com 95%
 
-* A variável $docentesColaboradores$, medida como a porcetagem de docentes colaboradores, pode possuir uma pequena relação significativa (ou talvez nem possuir, pelo fato do intervalo de confiança incluir o 0) com o erro b = [-0,92; 2,39], IC com 95%. 
+* A variável $docentesColaboradores$, medida como a porcetagem de docentes colaboradores, pode possuir uma pequena relação significativa (ou talvez nem possuir, pelo fato do intervalo de confiança incluir o 0) com o erro b = [-0.07; 0.05], IC com 95%. 
 
-> Após análise dos resultados obtidos para os valores das estimativas associadas a cada variável independente, implicam que o aumento de 1 unidade de $nivel$ produz uma mudança de 26,27 na produção dos programas de pós graduação em Ciência da Computação do Brasil, enquanto que o aumento da variável $periodicosComAlunoA1$ aumenta em 2,06 na produção do programa e o aumento do número de $docentesColaboradores$ aumenta em 0,73 nesta. E, que o modelo explica aproximadamente 86% da variância do modelo. 
+Após análise dos resultados obtidos para os valores das estimativas associadas a cada variável independente, implicam que o aumento de 1 unidade de $nivel$ produz uma mudança de 0,78 na produção dos programas de pós graduação em Ciência da Computação do Brasil, enquanto que o aumento da variável $periodicosComAlunoA1$ aumenta em 0,006 na produção do programa e o aumento do número de $docentesColaboradores$ possui em relação negativa de -0,005 nesta. O modelo só explica aproximadamente 51% da variância do modelo, e consequentemente, é necessaŕio analisar o impacto de outras variáveis para medir a produtividade dos programas.
 
-> Portanto, na prática, é possível observar que os de acordo com os dados disponibilizados pela CAPES, mostram que os programas de pós graduação em Ciência da Computação do Brasil mais conceitualizados possuem uma relação forte com a produção de pesquisa, enquanto periódicos com qualis A1 com a participação de alunos também possui impacto positivo, porém menor que o impacto do nível de conceito do curso de pós graduação. E por fim, a participação de docentes colaboradores na pesquisa também possui um efeito positivo (caso exista), porém bem menor que as duas últimas variáveis.
+Portanto, na prática, é possível observar que os de acordo com os dados disponibilizados pela CAPES, mostram que os programas de pós graduação em Ciência da Computação do Brasil mais conceitualizados é um fator que influencia na a produtividade dos programas, enquanto periódicos com qualis A1 com a participação de alunos também possui impacto positivo (caso exista), porém menor que o impacto do nível de conceito do curso de pós graduação. E por fim, a participação de docentes colaboradores na pesquisa aparenta influenciar bem menos (caso influencie) na produtividade os programas.
+
 
