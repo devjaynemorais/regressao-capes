@@ -1,6 +1,14 @@
 ---
 title: "Regressão linear na prática"
-output: html_notebook
+output: 
+  html_notebook:
+    theme: lumen
+    fig_width: 7
+    toc: true
+    toc_float: true
+    code_folding: hide
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r warning=FALSE, echo=FALSE}
@@ -120,6 +128,8 @@ VarIndep1: **a quantidade de docentes permanentes num dado programa de pós-grad
 
 VarDep: **produção do programa** - (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1)
 
+### Conclusão
+
 Regressão múltipla foi utilizada para analisar se **a quantidade de docentes permanentes num dado programa de pós-graduação** tem uma associação significativa  **produção do programa** (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1). Os resultados da regressão indicam que um modelo com os 1 preditor no formato $producao = -41.27 + 4.81 * docentesPermanentes$ explicam 81,46% da variância da variável de resposta (R2 = 0.8146).  A variável $docentesPermanentes$, medida como a quantidade total de docentes permanentes no programa de pós graduação, tem uma relação significativa com o erro (b = [4,27; 5,36], IC com 95%). O aumento de 1 unidade de $docentesPermanentes$ produz uma mudança positiva de 4.81 na produção do programa.
 
 
@@ -172,6 +182,7 @@ para_plotar_modelo %>%
 
 Considerando agora esses três fatores, o que podemos dizer sobre como cada um deles se relaciona com a produção de um programa de pós em CC? E sobre o modelo? Ele explica mais que o modelo 1? 
 
+### Conclusão
 
 Regressão múltipla foi utilizada para analisar se a **quantidade de docentes permanentes**, a **quantidade de mestrandos** e a **quantidade de doutorandos** tem uma associação significativa com a **produção do programa de pós graduação** (quantidade total de artigos publicados em períodicos com qualis A1, A2 e B1). 
 Os resultados da regressão indicam que um modelo com os 3 preditores no formato $producao = -14.37 + 3.50 * docentesPermanentes - 0.19 * mestrandos + 1.0007 * doutorandos$ explicam 87,07% da variância da variável de resposta (R2 = 0.8707). 
